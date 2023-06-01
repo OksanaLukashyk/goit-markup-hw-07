@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title lang="uk">Студія</title>
+    <meta name="description" content="Layout of WebStudio website" />
+    <title>WebStudio</title>
     <!-- preconnect-оптимізація процесу завантаження шрифтів -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -163,7 +164,7 @@
           <button class="button primary" type="button" data-modal-open>Order Service</button>
         </div>
       </section>
-      <!-- <section class="section advantages">
+      <section class="section advantages">
         <div class="container">
           <h2 class="section-title visually-hidden">Our Advantages</h2>
           <ul class="advantages-list">
@@ -217,14 +218,15 @@
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- <section class="section capabilities">
+      </section>
+      <section class="section capabilities">
         <div class="container">
           <h2 class="section-title">What are we doing</h2>
           <ul class="capabilities-list">
             <li class="capabilities-list-item">
               <img
-                src="./images/capabilities/web-development.jpg"
+                srcset="./images/capabilities/web-development@2x.jpg 2x"
+                src="./images/capabilities/web-development@1x.jpg"
                 alt="Web Development"
                 width="360"
                 height="300"
@@ -232,25 +234,33 @@
             </li>
             <li class="capabilities-list-item">
               <img
-                src="./images/capabilities/app-development.jpg"
+                srcset="./images/capabilities/app-development@2x.jpg 2x"
+                src="./images/capabilities/app-development@1x.jpg"
                 alt="App Development"
                 width="360"
                 height="300"
               />
             </li>
             <li class="capabilities-list-item">
-              <img src="./images/capabilities/design.jpg" alt="Design" width="360" height="300" />
+              <img
+                srcset="./images/capabilities/design@2x.jpg 2x"
+                src="./images/capabilities/design@1x.jpg"
+                alt="Design"
+                width="360"
+                height="300"
+              />
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- <section class="section team">
+      </section>
+      <section class="section team">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="team-list">
             <li class="team-list-item">
               <img
-                src="./images/team/mark-guerrero.jpg"
+                srcset="./images/team/mark-guerrero@2x.jpg 2x"
+                src="./images/team/mark-guerrero@1x.jpg"
                 alt="Mark Guerrero - Product Designer"
                 width="264"
                 height="260"
@@ -312,7 +322,8 @@
             </li>
             <li class="team-list-item">
               <img
-                src="./images/team/tom-ford.jpg"
+                srcset="./images/team/tom-ford@2x.jpg 2x"
+                src="./images/team/tom-ford@1x.jpg"
                 alt="Tom Ford - Frontend Developer"
                 width="264"
                 height="260"
@@ -374,7 +385,8 @@
             </li>
             <li class="team-list-item">
               <img
-                src="./images/team/camila-garcia.jpg"
+                srcset="./images/team/camila-garcia@2x.jpg 2x"
+                src="./images/team/camila-garcia@1x.jpg"
                 alt="Camila Garcia - Marketing"
                 width="264"
                 height="260"
@@ -436,7 +448,8 @@
             </li>
             <li class="team-list-item">
               <img
-                src="./images/team/daniel-wilson.jpg"
+                srcset="./images/team/daniel-wilson@2x.jpg 2x"
+                src="./images/team/daniel-wilson@1x.jpg"
                 alt="Daniel Wilson - UI Designer"
                 width="264"
                 height="260"
@@ -498,8 +511,8 @@
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- <section class="section customers">
+      </section>
+      <section class="section customers">
         <div class="container">
           <h2 class="section-title">Customers</h2>
           <ul class="customers-list">
@@ -547,10 +560,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <footer class="footer">
-      <!-- <div class="container-footer container">
+      <div class="container-footer container">
         <div class="footer-card">
           <a href="./index.html" class="logo-link">Web<span class="accent-footer">Studio</span></a>
           <p class="footer-description">
@@ -617,9 +630,9 @@
             </button>
           </form>
         </div>
-      </div> -->
+      </div>
     </footer>
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="icon-modal-close" aria-label="modal close button" width="8" height="8">
@@ -707,9 +720,9 @@
               id="user-privacy"
               value="true"
               required
-            /> -->
-    <!-- value="true" - a checkbox's value is only included in the submitted data if the checkbox is currently checked. If it is, then the value of the checkbox's value attribute is reported as the input's value, or on if no value is set -->
-    <!-- <label class="privacy-policy-checkbox-label" for="user-privacy">
+            />
+            <!-- value="true" - a checkbox's value is only included in the submitted data if the checkbox is currently checked. If it is, then the value of the checkbox's value attribute is reported as the input's value, or on if no value is set -->
+            <label class="privacy-policy-checkbox-label" for="user-privacy">
               <span class="custom-checkbox-wrapper">
                 <svg
                   class="contact-form-custom-checkbox"
@@ -731,7 +744,7 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
 
     <script
       defer
