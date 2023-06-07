@@ -270,10 +270,10 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
-    width: 100vw;
-    height: 100vh;
-    /* width: 100%;
-    height: 100%; */
+    /* width: 100vw;
+    height: 100vh; */
+    width: 100%;
+    height: 100%;
 
     background-color: var(--primary-white-color);
     overflow-y: auto;
@@ -305,8 +305,8 @@ body {
   .mobile-menu-container {
     position: relative;
     padding: 80px 35px 40px 40px;
-    width: 100%;
-    height: 100%;
+    /* width: 100vw;
+    height: 100vh; */
 
     color: var(--primary-dark-color);
     font-weight: 700;
@@ -384,7 +384,7 @@ body {
 
   .mobile-header-contacts-link {
     display: block;
-    font-size: 36px;
+    font-size: 24px;
     font-style: normal;
     line-height: 1.2;
     color: var(--light-accent-color);
@@ -402,12 +402,24 @@ body {
     color: var(--primary-text-color);
   }
 
+  @media screen and (min-width: 428px) {
+    .mobile-header-contacts-link {
+      font-size: 36px;
+    }
+  }
+
   /* == Mobile Menu Social Links == */
 
   .mobile-social-list {
     display: flex;
-    gap: 56px;
+    gap: 25px; /*for 320px*/
     align-items: center;
+  }
+
+  @media screen and (min-width: 428px) {
+    .mobile-social-list {
+      gap: 56px;
+    }
   }
 
   .mobile-social-list-link {
@@ -416,6 +428,8 @@ body {
     align-items: center;
     height: 40px;
     width: 40px;
+    /* height: 100%;
+    width: 100%; */
     background-color: var(--light-accent-color);
     border-radius: 50%;
 
@@ -433,7 +447,8 @@ body {
   }
 }
 
-/* == Tablet == */
+/* == Tablet, Desktop Header Nav == */
+
 @media screen and (max-width: 1157px) {
   .main-nav .logo-link {
     margin-right: 120px;
@@ -528,7 +543,6 @@ body {
   }
 }
 
-/* == Desktop == */
 @media screen and (min-width: 1158px) {
   .main-nav .logo-link {
     margin-right: 76px;
@@ -575,6 +589,12 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-title {
+    text-transform: capitalize;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -647,6 +667,10 @@ body {
   .advantages-list-name {
     font-weight: 700;
     font-size: 36px;
+  }
+
+  .advantages-list-item-description {
+    font-weight: 500;
   }
 }
 
@@ -957,7 +981,7 @@ body {
 
 @media screen and (min-width: 1158px) {
   .container-footer {
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     align-items: baseline;
     justify-content: start;
   }
@@ -1051,17 +1075,19 @@ body {
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: var(--primary-white-color);
-  opacity: 0.6;
+  /* color: var(--primary-white-color);
+  opacity: 0.6; */
   background-color: transparent;
-  /* color: rgba(255, 255, 255, 0.6); */
-  /* border: 1px solid rgba(255, 255, 255, 0.6); */
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 
   transition: border-color var(--transition-duration-function);
 }
 
 .subscription-email-input::placeholder {
-  color: var(--primary-white-color);
+  /* color: var(--primary-white-color); */
+  color: rgba(255, 255, 255, 0.6);
+
   transition: color var(--transition-duration-function);
 }
 
@@ -1119,6 +1145,10 @@ body {
     margin-bottom: 0;
     width: 264px;
   }
+
+  .subscribe-footer-btn {
+    margin: 0;
+  }
 }
 
 /* =========================== Footer End ===========================*/
@@ -1143,8 +1173,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 
-  width: 408px;
+  /* width: 408px; */
   height: 584px;
   padding: 72px 24px 24px 24px;
 
@@ -1156,10 +1187,16 @@ body {
   transition: transform var(--transition-duration-function);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 428px) and (max-width: 767px) {
   .modal {
     width: 392px;
     padding: 72px 16px 24px 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
   }
 }
 
